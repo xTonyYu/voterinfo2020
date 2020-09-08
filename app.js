@@ -1,0 +1,1 @@
+console.log('voter info 2020')
