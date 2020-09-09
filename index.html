@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script default src="app.js"></script>
+  <script defer src="app.js"></script>
   <title>Voter Info 2020</title>
 </head>
 <body>
-  <h1>Voter Info</h1>
-
-  <form action="/address" method="GET">
+  <h1 >Voter Info</h1>
+  
+  <form id="voter-info" method="GET">
 
     <input placeholder="street address" type="text" name="street address" /> <br/><br/>
 
@@ -20,7 +20,7 @@
 
     <input placeholder="zip" type="text" name="zip" /> <br/><br/>
 
-    <button id="search-address" type="submit">polling locations near address</button>
+    <button type="submit">polling locations near address</button>
 
   </form>
 </body>
