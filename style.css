@@ -7,6 +7,12 @@ body {
   background-color: #F4F4F4;
 }
 
+.hidden {
+  display: none !important;
+}
+
+/* -------------------LANDING-------------------- */
+
 #landing-container {
   width: 100vw;
   height: 100vh;
@@ -14,6 +20,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #landing-h1 {
@@ -39,7 +46,7 @@ body {
   width: 100%;
 }
 
-#get-started {
+.get-started {
   margin-top: 30px;
   border: 0;
   width: 60vw;
@@ -52,4 +59,30 @@ body {
   text-decoration: none;
   box-shadow: -2px 2px 5px darkgray;
   color: #F4F4F4;
+}
+
+/* -------------------FORM PAGE-------------------- */
+
+#form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 1em;
+  width: 85vw;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#voter-info {
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  margin-top: 8vh;
+  justify-content: center;
+  align-items: center;
 }
