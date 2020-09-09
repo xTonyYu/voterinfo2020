@@ -16,17 +16,35 @@
       <div class="landing-item"><img src="./assets/checklist.png" alt="checklist"></div>
       <div class="landing-item"><img src="./assets/vote.png" alt="vote"></div>
     </div>
-    <a id="get-started" href="/">Get Started</a>
+    <a id="get-started" class="get-started">Get Started</a>
   </div>
   
-  <div id="form-container">  
+  <div id="form-container" class="hidden">  
+    <h3>Please Enter Your Address</h3>
     <form id="voter-info" method="GET">
-      <input placeholder="street address" type="text" name="street address" /> <br/><br/>
-      <input placeholder="city" type="text" name="city" /> <br/><br/>
-      <input placeholder="state" type="text" name="state" /> <br/><br/>
-      <input placeholder="zip" type="text" name="zip" /> <br/><br/>
-      <button type="submit">polling locations near address</button>
+      <div class="field">
+        <label for="street address">Street adress</label></br>
+        <input type="text" name="street address" /> <br/><br/>
+      </div>
+      <div class="field">
+        <label for="street address optional">Street adress (Optional)</label></br>
+        <input type="text" name="city" /> <br/><br/>
+      </div>
+      <div class="field">
+        <label for="city">City</label></br>
+        <input type="text" name="city" /> <br/><br/>
+      </div>
+      <div class="field">
+        <label for="state">State or Providence*</label></br>
+        <input type="text" name="state" /> <br/><br/>
+      </div>
+      <div class="field">
+        <label for="zip">Zip</label></br>
+        <input type="text" name="zip" /> <br/><br/>
+      </div>
+      <button class="get-started" type="submit">polling locations near address</button>
     </form>
+    <!-- <a id="get-started" href="/">Search</a> -->
   </div>
 </body>
 </html>
