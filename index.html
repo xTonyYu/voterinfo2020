@@ -8,7 +8,7 @@
   <title>Voter Info 2020</title>
 </head>
 <body>
-  <div id="landing-container" class="hidden"> 
+  <div id="landing-container" class="hidden" > 
     <h1 id="landing-h1">Welcome</h1>
     <div id="landing-item-container">
       <div class="landing-item"><img src="./assets/address.png" alt="adress"></div>
@@ -24,23 +24,23 @@
     <form id="voter-info" method="GET">
       <div class="field">
         <label for="street address">Street adress</label><br/>
-        <input type="text" name="street address" required value="217 8th Ave" /> <br/><br/>
+        <input type="text" name="street address" required value="" /> <br/><br/>
       </div>
       <div class="field">
         <label for="street address optional">Street adress (Optional)</label><br/>
-        <input type="text" name="city" /> <br/><br/>
+        <input type="text" name="street line2" /> <br/><br/>
       </div>
       <div class="field">
         <label for="city">City</label><br/>
-        <input type="text" name="city" required value="San Mateo" /> <br/><br/>
+        <input type="text" name="city" required value="" /> <br/><br/>
       </div>
       <div class="field">
         <label for="state">State</label><br/>
-        <input type="text" name="state" required value="CA" /> <br/><br/>
+        <input type="text" name="state" required value="ca" /> <br/><br/>
       </div>
       <div class="field">
         <label for="zip">Zip</label><br/>
-        <input type="text" name="zip" required value="94401" /> <br/><br/>
+        <input type="text" name="zip" required value="" /> <br/><br/>
       </div>
       <button class="get-started" type="submit">polling locations near address</button>
     </form>
@@ -52,31 +52,81 @@
           <div class="info-tab-container"><div class="info-tab">Early Voting</div><div class="fancy-border"></div></div>
       </nav>
       <div id="current-address">
-          <h3>Current Address</h3></br>
-          <p>12345 Fake St. Apt 12 San Mateo CA 94028</p>
+          <h3>Current Address</h3><br/>
+          <p id="current-address-p" >12345 Fake St. Apt 12 San Mateo CA 94028</p>
       </div>
+
       <div class="info-container">
           <div id="polling-info">
               <h3>Polling Location</h3>
-              <div class="polling-card">
+              <div class="card">
                   <img src="./assets/location.png" alt="">
-                  <div class="polling-address">
-                      <h4>County Clerks Office</h4>
-                      <p>12345 Fake St. Apt 12 San Mateo CA 94028</p>
-                      <p>Distance: infinity</p>
+                  <div class="address">
+                      <h4 id="location-name">County Clerks Office</h4>
+                      <p id="polling-location">12345 Fake St. Apt 12 San Mateo CA 94028</p>
+                      <p>Distance: TBD</p>
                   </div>
-                  <a href="maps.google.com" target="_blank">Go to Google</a>
+                  <a href="https://maps.google.com/?q=" target="_blank">Go to Google</a>
               </div>
               <div class="checklist">
                   <h3>Day-of Voting Checklist</h3>
                   <ul>
-                      <li class="checklist-item">Bring a valid id dumbass</li>
-                      <li class="checklist-item">bring a mask and hand sanitizer</li>
+                      <li class="checklist-item">Bring a valid ID</li>
+                      <li class="checklist-item">Bring a mask and hand sanitizer</li>
                       <li class="checklist-item">Plan ahead</li>
                   </ul>
               </div>
           </div>
       </div>
+
+      <div class="info-container">
+        <div id="polling-info">
+            <h3>Early Voting Location</h3>
+            <div class="card">
+                <img src="./assets/location.png" alt="">
+                <div class="address">
+                    <h4 id="location-name">County Clerks Office</h4>
+                    <p id="early-location">12345 Fake St. Apt 12 San Mateo CA 94028</p>
+                    <p>Distance: TBD</p>
+                </div>
+                <a href="maps.google.com" target="_blank">Go to Google</a>
+            </div>
+            <div class="checklist">
+                <h3>Early Voting Checklist</h3>
+                <ul>
+                    <li class="checklist-item">Bring a valid, government issued ID</li>
+                    <li class="checklist-item">Bring a mask and hand sanitizer</li>
+                    <li class="checklist-item">Plan ahead in case of long wait times due to COVID-19</li>
+                    <li class="checklist-item">Double check dates and times to make sure you can vote early</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-container">
+      <div id="polling-info">
+          <h3>Drop off Location</h3>
+          <div class="card">
+              <img src="./assets/mailbox.png" alt="">
+              <div class="address">
+                  <h4 id="location-name">County Clerks Office</h4>
+                  <p id="dropoff-location">12345 Fake St. Apt 12 San Mateo CA 94028</p>
+                  <p>Distance: TBD</p>
+              </div>
+              <a href="maps.google.com" target="_blank">Go to Google</a>
+          </div>
+          <div class="checklist">
+              <h3>Mail-In Voting Checklist</h3>
+              <ul>
+                  <li class="checklist-item">Fill out your ballot correctly</li>
+                  <li class="checklist-item">Make sure your envvlope is properly postmarked ans addressed according to your state guidelines</li>
+                  <li class="checklist-item">Plan ahead in case of postal delays due to COVID-19</li>
+                  <li class="checklist-item">Plan ahead in case of postal delays due to COVID-19</li>
+                  <li class="checklist-item">Plan ahead in case of long wait times due to COVID-19</li>
+              </ul>
+          </div>
+      </div>
+  </div>
   </div>
     <!-- <a id="get-started" href="/">Search</a> -->
   

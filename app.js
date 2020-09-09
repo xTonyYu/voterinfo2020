@@ -1,4 +1,7 @@
 console.log('voter info 2020')
+const curAddressDOM = document.getElementById('current-address-p')
+const locationNameDOM = document.getElementById('location-name')
+const pollingLocationDOM = document.getElementById('polling-location')
 
 function toggle() {
   document.getElementById('landing-container').classList.add('hidden')
@@ -35,11 +38,11 @@ voterInfo.addEventListener('submit', e => {
   fetch(URL).then(res => res.json())
   .then(resData => {
     data = resData
-
+    console.log(data)
     // normalized current address
     let dataObj = data.normalizedInput
     let curAddress = stringAddressFieldsTogether(dataObj)
-    // *********** DOM update here *******************
+    curAddressDOM.innerHTML = `<p>${curAddress}</p>`
     
     // Polling location
     let locationName = '', pollingLocation = '';
@@ -51,7 +54,8 @@ voterInfo.addEventListener('submit', e => {
       locationName = ''
       pollingLocation = 'Information currently not available.  Please check back later.'
     }
-    // *********** DOM update here *******************
+    locationNameDOM.innerText = locationName
+    pollingLocationDOM.innerText = pollingLocation
 
     // Early Vote location
     let earlyLocName = '', earlyVoteLoc = '';

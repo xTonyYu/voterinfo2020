@@ -140,7 +140,7 @@ input {
   height: fit-content;
 }
 
-.polling-card {
+.card {
   width: 90vw;
   border: 1px solid black;
   background-color: white;
@@ -149,18 +149,18 @@ input {
   margin: 10px 0 10px 0;
 }
 
-.polling-card img {
+.card img {
   margin: 20px 10px 20px 10px;
 }
 
-.polling-address {
+.address {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.polling-card a {
+.card a {
   margin-left: 20px;
   color: blue;
 }
