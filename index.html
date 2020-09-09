@@ -8,20 +8,25 @@
   <title>Voter Info 2020</title>
 </head>
 <body>
-  <h1 >Voter Info</h1>
+  <div id="landing-container"> 
+    <h1 id="landing-h1">Welcome</h1>
+    <div id="landing-item-container">
+      <div class="landing-item"><img src="./assets/address.png" alt="adress"></div>
+      <div class="landing-item"><img src="./assets/pollinginfo.png" alt="polling info"></div>
+      <div class="landing-item"><img src="./assets/checklist.png" alt="checklist"></div>
+      <div class="landing-item"><img src="./assets/vote.png" alt="vote"></div>
+    </div>
+    <a id="get-started" href="/">Get Started</a>
+  </div>
   
-  <form id="voter-info" method="GET">
-
-    <input placeholder="street address" type="text" name="street address" /> <br/><br/>
-
-    <input placeholder="city" type="text" name="city" /> <br/><br/>
-
-    <input placeholder="state" type="text" name="state" /> <br/><br/>
-
-    <input placeholder="zip" type="text" name="zip" /> <br/><br/>
-
-    <button type="submit">polling locations near address</button>
-
-  </form>
+  <div id="form-container">  
+    <form id="voter-info" method="GET">
+      <input placeholder="street address" type="text" name="street address" /> <br/><br/>
+      <input placeholder="city" type="text" name="city" /> <br/><br/>
+      <input placeholder="state" type="text" name="state" /> <br/><br/>
+      <input placeholder="zip" type="text" name="zip" /> <br/><br/>
+      <button type="submit">polling locations near address</button>
+    </form>
+  </div>
 </body>
 </html>
