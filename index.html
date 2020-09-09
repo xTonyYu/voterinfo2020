@@ -8,7 +8,7 @@
   <title>Voter Info 2020</title>
 </head>
 <body>
-  <div id="landing-container"> 
+  <div id="landing-container" class="hidden"> 
     <h1 id="landing-h1">Welcome</h1>
     <div id="landing-item-container">
       <div class="landing-item"><img src="./assets/address.png" alt="adress"></div>
@@ -19,28 +19,28 @@
     <a id="get-started" class="get-started">Get Started</a>
   </div>
   
-  <div id="form-container" class="hidden">  
+  <div id="form-container" class="">  
     <h3>Please Enter Your Address</h3>
     <form id="voter-info" method="GET">
       <div class="field">
-        <label for="street address">Street adress</label></br>
-        <input type="text" name="street address" /> <br/><br/>
+        <label for="street address">Street adress</label><br/>
+        <input type="text" name="street address" required value="217 8th Ave" /> <br/><br/>
       </div>
       <div class="field">
-        <label for="street address optional">Street adress (Optional)</label></br>
+        <label for="street address optional">Street adress (Optional)</label><br/>
         <input type="text" name="city" /> <br/><br/>
       </div>
       <div class="field">
-        <label for="city">City</label></br>
-        <input type="text" name="city" /> <br/><br/>
+        <label for="city">City</label><br/>
+        <input type="text" name="city" required value="San Mateo" /> <br/><br/>
       </div>
       <div class="field">
-        <label for="state">State or Providence*</label></br>
-        <input type="text" name="state" /> <br/><br/>
+        <label for="state">State</label><br/>
+        <input type="text" name="state" required value="CA" /> <br/><br/>
       </div>
       <div class="field">
-        <label for="zip">Zip</label></br>
-        <input type="text" name="zip" /> <br/><br/>
+        <label for="zip">Zip</label><br/>
+        <input type="text" name="zip" required value="94401" /> <br/><br/>
       </div>
       <button class="get-started" type="submit">polling locations near address</button>
     </form>
