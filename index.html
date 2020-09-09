@@ -24,7 +24,7 @@
     <form id="voter-info" method="GET">
       <div class="field">
         <label for="street address">Street adress</label><br/>
-        <input type="text" name="street address" required value="" /> <br/><br/>
+        <input type="text" name="street address" required value="406 Seville Way" /> <br/><br/>
       </div>
       <div class="field">
         <label for="street address optional">Street adress (Optional)</label><br/>
@@ -32,7 +32,7 @@
       </div>
       <div class="field">
         <label for="city">City</label><br/>
-        <input type="text" name="city" required value="" /> <br/><br/>
+        <input type="text" name="city" required value="san Mateo" /> <br/><br/>
       </div>
       <div class="field">
         <label for="state">State</label><br/>
@@ -40,7 +40,7 @@
       </div>
       <div class="field">
         <label for="zip">Zip</label><br/>
-        <input type="text" name="zip" required value="" /> <br/><br/>
+        <input type="text" name="zip" required value="94402" /> <br/><br/>
       </div>
       <button class="get-started" type="submit">polling locations near address</button>
     </form>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="info-container">
-          <div id="polling-info">
+          <div class="polling-info">
               <h3>Polling Location</h3>
               <div class="card">
                   <img src="./assets/location.png" alt="">
@@ -66,7 +66,7 @@
                       <p id="polling-location">12345 Fake St. Apt 12 San Mateo CA 94028</p>
                       <p>Distance: TBD</p>
                   </div>
-                  <a id="map-polling" href="https://maps.google.com/?q=575 Maple St., San Mateo, CA 94402" target="_blank">Go to Google</a>
+                  <a id="map-polling" href="https://maps.google.com/?q=" target="_blank">Go to Google</a>
               </div>
               <div class="checklist">
                   <h3>Day-of Voting Checklist</h3>
@@ -80,16 +80,16 @@
       </div>
 
       <div class="info-container">
-        <div id="polling-info">
+        <div class="polling-info">
             <h3>Early Voting Location</h3>
             <div class="card">
                 <img src="./assets/location.png" alt="">
                 <div class="address">
-                    <h4 id="location-name">County Clerks Office</h4>
+                    <h4 id="early-location-name">County Clerks Office</h4>
                     <p id="early-location">12345 Fake St. Apt 12 San Mateo CA 94028</p>
                     <p>Distance: TBD</p>
                 </div>
-                <a  id="map-polling" href="maps.google.com" target="_blank">Go to Google</a>
+                <a id="map-early-location" href="maps.google.com" target="_blank">Go to Google</a>
             </div>
             <div class="checklist">
                 <h3>Early Voting Checklist</h3>
@@ -104,16 +104,16 @@
     </div>
 
     <div class="info-container">
-      <div id="polling-info">
+      <div class="polling-info">
           <h3>Drop off Location</h3>
           <div class="card">
               <img src="./assets/mailbox.png" alt="">
               <div class="address">
-                  <h4 id="location-name">County Clerks Office</h4>
+                  <h4 id="dropoff-location-name">County Clerks Office</h4>
                   <p id="dropoff-location">12345 Fake St. Apt 12 San Mateo CA 94028</p>
                   <p>Distance: TBD</p>
               </div>
-              <a href="maps.google.com" target="_blank">Go to Google</a>
+              <a id="map-dropoff-location" href="maps.google.com" target="_blank">Go to Google</a>
           </div>
           <div class="checklist">
               <h3>Mail-In Voting Checklist</h3>

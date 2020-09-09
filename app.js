@@ -2,6 +2,15 @@ console.log('voter info 2020')
 const curAddressDOM = document.getElementById('current-address-p')
 const locationNameDOM = document.getElementById('location-name')
 const pollingLocationDOM = document.getElementById('polling-location')
+const mapPollingDOM = document.getElementById('map-polling')
+
+const earlyLocationNameDOM = document.getElementById('early-location-name')
+const earlyLocationDOM = document.getElementById('early-location')
+const mapEarlyLocDOM = document.getElementById('map-early-location')
+
+const dropoffLocationNameDOM = document.getElementById('dropoff-location-name')
+const dropoffLocationDOM = document.getElementById('dropoff-location')
+const mapDropoffLocDOM = document.getElementById('map-dropoff-location')
 
 function toggle() {
   document.getElementById('landing-container').classList.add('hidden')
@@ -28,6 +37,14 @@ const stringAddressFieldsTogether = function stringAddressFieldsTogether(dataObj
   return address;
 }
 
+let mapSite =''
+if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+  mapSite = 'https://maps.apple.com/?q='
+} else {
+  mapSite = 'https://maps.google.com/?q='
+}
+
+
 voterInfo.addEventListener('submit', e => {
   e.preventDefault();
   voterInfo.querySelectorAll('input').forEach( ele => {
@@ -50,7 +67,9 @@ voterInfo.addEventListener('submit', e => {
       dataObj = data.pollingLocations[0].address
       locationName = dataObj.locationName || ''
       pollingLocation = stringAddressFieldsTogether(dataObj)
+      mapPollingDOM.setAttribute('href', mapSite + pollingLocation)
     } else {
+      mapPollingDOM.classList.add('hidden')
       locationName = ''
       pollingLocation = 'Information currently not available.  Please check back later.'
     }
@@ -63,11 +82,14 @@ voterInfo.addEventListener('submit', e => {
       dataObj = data.earlyVoteSites[0].address
       earlyLocName = dataObj.locationName || ''
       earlyVoteLoc = stringAddressFieldsTogether(dataObj)
+      mapEarlyLocDOM.setAttribute('href', mapSite + earlyVoteLoc)
     } else {
+      mapEarlyLocDOM.classList.add('hidden')
       earlyLocName = ''
       earlyVoteLoc = 'Information currently not available.  Please check back later.'
     }
-    // *********** DOM update here *******************
+    earlyLocationNameDOM.innerText = earlyLocName
+    earlyLocationDOM.innerText = earlyVoteLoc
 
     // Dropoff location
     let dropoffLocName = '', dropoffLoc = '';
@@ -75,12 +97,14 @@ voterInfo.addEventListener('submit', e => {
       dataObj = data.dropOffLocations[0].address
       dropoffLocName = dataObj.locationName || ''
       dropoffLoc = stringAddressFieldsTogether(dataObj)
+      mapDropoffLocDOM.setAttribute('href', mapSite + dropoffLoc)
     } else {
+      mapDropoffLocDOM.classList.add('hidden')
       dropoffLocName = ''
       dropoffLoc = 'Information currently not available.  Please check back later.'
     }
-    // *********** DOM update here *******************
-    
+    dropoffLocationNameDOM.innerText = dropoffLocName
+    dropoffLocationDOM.innerText = dropoffLoc
     
     console.log("current address", curAddress)
     console.log("polling", locationName, pollingLocation)
