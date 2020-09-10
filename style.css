@@ -1,3 +1,8 @@
+:root {
+  --yovo-blue: #172E4E;
+
+}
+
 * {
   margin: 0;
   color: #1B1B1B;
@@ -27,26 +32,55 @@ body {
   margin-bottom: 30px
 }
 
+.color-line {
+  display: flex;
+}
+
+.color-line div:first-child {
+  width: 47vw;
+  border: #FF0000 4px solid
+}
+
+.color-line div:nth-child(2) {
+  width: 6vw;
+  border: #1BB3A8 4px solid
+}
+
+.color-line div:last-child {
+  width: 47vw;
+  border: #0000FF 4px solid
+}
+
+
 #landing-item-container {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .landing-item {
-  width: 25vw;
-  height: 25vw;
+  width: 100vw;
+  height: fit-content;
   margin: 5px;
-
-
+  text-align: center;
+  background-color: var(--yovo-blue);
 }
 
 .landing-item img {
-  width: 100%;
+  width: 25vw;
+  max-width: 100px;
+  color: white;
+}
+.landing-item p {
+  width: 90%;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
-.get-started {
+.search {
   margin-top: 30px;
   border: 0;
   width: 60vw;
@@ -92,40 +126,10 @@ input {
 #info-page-container {
   width: 100vw;
   height: 100vh;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#tabs {
-  width: 90vw;
-  height: 50px;
-  display: flex;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  font-size: 1.3em;
-}
-
-.info-tab-container {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.info-tab {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fancy-border {
-  width: 30%;
-  background-color: #1BB3A8;
-  height: 3px;
-  margin-top: 10px;
 }
 
 #current-address {
@@ -187,7 +191,29 @@ ul li {
 li::before {
   content: "\2022";
   color: #1BB3A8;
-  
   margin-right: 10px;
   display: inline-block;
+}
+
+
+@media only screen and (min-width: 600px) {
+  #landing-container {
+    height: fit-content;
+  }
+
+  #landing-item-container {
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: var(--yovo-blue);
+  }
+
+  .landing-item,
+  .landing-item p {
+    width: 15vw;
+  }
+
+  #form-container {
+    height: fit-content;
+    margin-top: 50px;
+  }
 }

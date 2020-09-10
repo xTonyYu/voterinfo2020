@@ -1,4 +1,6 @@
 console.log('voter info 2020')
+const voterInfo = document.getElementById('voter-info')
+
 const curAddressDOM = document.getElementById('current-address-p')
 const locationNameDOM = document.getElementById('location-name')
 const pollingLocationDOM = document.getElementById('polling-location')
@@ -12,14 +14,7 @@ const dropoffLocationNameDOM = document.getElementById('dropoff-location-name')
 const dropoffLocationDOM = document.getElementById('dropoff-location')
 const mapDropoffLocDOM = document.getElementById('map-dropoff-location')
 
-function toggle() {
-  document.getElementById('landing-container').classList.add('hidden')
-  document.getElementById('form-container').classList.remove('hidden')
-}
-document.getElementById('get-started').addEventListener('click', toggle)
-
 // Fetching data from Google Civic Info API and update the DOM
-const voterInfo = document.getElementById('voter-info')
 let addressForURL = '', data;
 
 const stringAddressFieldsTogether = function stringAddressFieldsTogether(dataObj) {
@@ -47,6 +42,9 @@ if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
 
 voterInfo.addEventListener('submit', e => {
   e.preventDefault();
+  document.getElementById('landing-container').classList.add('hidden')
+  document.getElementById('form-container').classList.add('hidden')
+  document.getElementById('info-page-container').classList.remove('hidden')
   voterInfo.querySelectorAll('input').forEach( ele => {
     // console.dir(ele.value)
     addressForURL += `${ele.value} `
