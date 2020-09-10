@@ -185,7 +185,7 @@ button {
 
 .card {
   width: 90vw;
-  border: 1px solid grey;
+  box-shadow: 2px 2px 7px lightgrey;
   border-radius: 15px;
   background-color: white;
   align-items: center;
@@ -204,6 +204,11 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+#edit-address {
+  width: fit-content;
+  margin-left: 0px;
 }
 
 .card h4 {
@@ -229,6 +234,11 @@ button {
 
 .checklist {
   width: 90vw;
+  background-color: white;
+  border-radius: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .checklist img {
@@ -239,13 +249,14 @@ button {
 .checklist h3 {
   display: inline-block;
   font-size: 1.3em;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 35px  
+
 }
 
 ul {
   list-style: none;  
   font-size: 1.3em;
+  margin-right: 20px;
 }
 
 ul li {
@@ -253,11 +264,16 @@ ul li {
   font-family: 'Quicksand', sans-serif;
 }
 
-li::before {
-  content: "\2022";
-  color: #1BB3A8;
-  margin-right: 10px;
-  display: inline-block;
+.checklist-entry {
+  display: flex;
+  flex-wrap: no-wrap;
+  margin-top: -10px;
+}
+
+.checklist-entry img {
+  height: fit-content;
+  margin-top: 28px;
+  margin-right: 5px;
 }
 
 
@@ -313,6 +329,43 @@ li::before {
   #req-field p {
     position: absolute;
     right: 15vw;
+  }
+
+  #info-page-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .polling-info {
+    margin: 0 50px 0 50px;
+  }
+
+  #current-address
+  .card {
+    position: relative;
+  }
+
+  #current-address
+  .card
+  img {
+    position: absolute;
+    right: 20px;
+  }
+
+  .info-container
+  .polling-info,
+  .info-container
+  .polling-info
+  .card,
+  .checklist 
+  {
+    width: 40vw;
+  }
+
+  .checklist {
+    margin-top: 52px;
   }
 
 }
