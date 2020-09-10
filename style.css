@@ -20,6 +20,16 @@ body {
 
 /* -------------------LANDING-------------------- */
 
+.logo {
+  background-color: white;
+  width: 100vw;
+  margin: 0 !important;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #landing-container {
   width: 100vw;
   display: flex;
@@ -93,11 +103,11 @@ body {
 }
 
 #form-container h3 {
-  background-color: white;
   font-size: 20px;
   font-weight: bold;
   display: block;
-  padding: 50px 50px;
+  font-size: 18px;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -259,7 +269,10 @@ li::before {
   #landing-item-container {
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-evenly;
     background-color: var(--yovo-blue);
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .landing-item,
@@ -270,5 +283,36 @@ li::before {
   #form-container {
     height: fit-content;
     margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
   }
+
+  #form-container h3 {
+    width: 100%;
+  }
+
+  input {
+    width: 70vw;
+  }
+
+  .small-form-fields {
+    width: fit-content;
+  }
+  .small-form-fields input, .small-form-fields label {
+    width: 30vw !important;
+    margin: 0 50px 0 50px;
+  }
+
+  .search {
+    width: 20vw;
+    margin-bottom: 150px;
+  }
+
+  #req-field p {
+    position: absolute;
+    right: 15vw;
+  }
+
 }
