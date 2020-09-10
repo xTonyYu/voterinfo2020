@@ -1,4 +1,4 @@
-console.log('voter info 2020')
+console.log('Yovo - Voter info 2020')
 const voterInfo = document.getElementById('voter-info')
 
 const curAddressDOM = document.getElementById('current-address-p')
@@ -54,18 +54,17 @@ voterInfo.addEventListener('submit', e => {
   togglePage()
   scroll(0,0)
   voterInfo.querySelectorAll('input').forEach( ele => {
-    // console.dir(ele.value)
     addressForURL += `${ele.value} `
   })
   const URL = 'https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyAHOsjZyYzVuSdwGFoQzKckUx7ygGZXjzQ&electionId=2000&address=' + addressForURL
   fetch(URL).then(res => res.json())
   .then(resData => {
     data = resData
-    console.log(data)
+
     // normalized current address
     let dataObj = data.normalizedInput
     let curAddress = stringAddressFieldsTogether(dataObj)
-    curAddressDOM.innerHTML = `<p>${curAddress}</p>`
+    curAddressDOM.innerText = curAddress
     
     // Polling location
     let locationName = '', pollingLocation = '';
@@ -112,10 +111,6 @@ voterInfo.addEventListener('submit', e => {
     dropoffLocationNameDOM.innerText = dropoffLocName
     dropoffLocationDOM.innerText = dropoffLoc
     
-    console.log("current address", curAddress)
-    console.log("polling", locationName, pollingLocation)
-    console.log("early", earlyLocName, earlyVoteLoc)
-    console.log("dropoff", dropoffLocName, dropoffLoc)
   })
 })
 

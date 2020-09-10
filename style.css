@@ -23,11 +23,12 @@ body {
 .logo {
   background-color: white;
   width: 100vw;
-  margin: 0 !important;
-  height: 25vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0 0;
+  padding-left: 30px;
 }
 
 #landing-container {
@@ -36,10 +37,6 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-}
-
-.logo {
-  margin: 20px 0 20px 40px;
 }
 
 .color-line {
@@ -164,7 +161,7 @@ button {
 
 #info-page-container {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -194,7 +191,7 @@ button {
 }
 
 .card img {
-  margin: 20px 10px 20px 10px;
+  margin: 20px;
 }
 
 #current-address
@@ -352,7 +349,7 @@ ul li {
   }
 
   .polling-info {
-    margin: 0 50px 0 50px;
+    margin: 0 10px;
   }
 
   #current-address
