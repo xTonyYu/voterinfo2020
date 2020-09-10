@@ -14,8 +14,16 @@ const dropoffLocationNameDOM = document.getElementById('dropoff-location-name')
 const dropoffLocationDOM = document.getElementById('dropoff-location')
 const mapDropoffLocDOM = document.getElementById('map-dropoff-location')
 
+const editAddressDOM = document.getElementById('edit-address')
+
+const togglePage = function togglePage() {
+  document.getElementById('landing-container').classList.toggle('hidden')
+  document.getElementById('form-container').classList.toggle('hidden')
+  document.getElementById('info-page-container').classList.toggle('hidden')
+}
+
+
 // Fetching data from Google Civic Info API and update the DOM
-let addressForURL = '', data;
 
 const stringAddressFieldsTogether = function stringAddressFieldsTogether(dataObj) {
   let address = '';
@@ -41,10 +49,10 @@ if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
 
 
 voterInfo.addEventListener('submit', e => {
+  let addressForURL = '', data;
   e.preventDefault();
-  document.getElementById('landing-container').classList.add('hidden')
-  document.getElementById('form-container').classList.add('hidden')
-  document.getElementById('info-page-container').classList.remove('hidden')
+  togglePage()
+  scroll(0,0)
   voterInfo.querySelectorAll('input').forEach( ele => {
     // console.dir(ele.value)
     addressForURL += `${ele.value} `
@@ -111,3 +119,4 @@ voterInfo.addEventListener('submit', e => {
   })
 })
 
+editAddressDOM.addEventListener('click', togglePage)
