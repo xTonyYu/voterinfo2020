@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #F4F4F4;
+  background-color: #EAEAEA;
 }
 
 .hidden {
@@ -20,16 +20,14 @@ body {
 
 #landing-container {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-#landing-h1 {
-  margin-bottom: 30px
+.logo {
+  margin: 20px 0 20px 40px;
 }
 
 .color-line {
@@ -61,17 +59,19 @@ body {
 }
 
 .landing-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: fit-content;
+  height: 25vh;
   margin: 5px;
   text-align: center;
   background-color: var(--yovo-blue);
 }
 
 .landing-item img {
-  width: 25vw;
-  max-width: 100px;
-  color: white;
+  /* width: 25vw; */
+  height: 80%;
 }
 .landing-item p {
   width: 90%;
@@ -80,29 +80,28 @@ body {
   margin-bottom: 10px;
 }
 
-.search {
-  margin-top: 30px;
-  border: 0;
-  width: 60vw;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #1BB3A8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  box-shadow: -2px 2px 5px darkgray;
-  color: #F4F4F4;
-}
-
 /* -------------------FORM PAGE-------------------- */
 
 #form-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 4vh;
   align-items: center;
+}
+
+#form-container h3 {
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  padding: 50px 50px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
 input {
@@ -112,13 +111,41 @@ input {
   border-radius: 5px;
 }
 
+button {
+  font-size: 18px;
+}
+
 #voter-info {
   display: flex;
   height: fit-content;
   flex-wrap: wrap;
-  margin-top: 8vh;
+  margin-top: 5vh;
   justify-content: center;
   align-items: center;
+}
+
+#req-field {
+  width: 100%;
+}
+#req-field p {
+  text-align: right;
+  margin: 10px 20px 0 0;
+  font-weight: bold;
+}
+
+.search {
+  margin-top: 30px;
+  border: 0;
+  width: 60vw;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--yovo-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: -2px 2px 5px darkgray;
+  color: #F4F4F4;
 }
 
 /* -------------------Day of---------------------- */
@@ -166,16 +193,23 @@ input {
 
 .card a {
   margin-left: 20px;
-  color: blue;
+  text-decoration: none;
+  color: #0058FF;
 }
 
 .checklist {
   width: 90vw;
 }
 
+.checklist img {
+  display: inline;
+  vertical-align: middle;
+  padding: 0 5px;
+}
 .checklist h3 {
+  display: inline-block;
   font-size: 1.3em;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
