@@ -37,17 +37,17 @@ body {
 }
 
 .color-line div:first-child {
-  width: 47vw;
+  width: calc(50vw - 27px);
   border: #FF0000 4px solid
 }
 
 .color-line div:nth-child(2) {
-  width: 6vw;
+  width: 54px;
   border: #1BB3A8 4px solid
 }
 
 .color-line div:last-child {
-  width: 47vw;
+  width: calc(50vw - 27px);
   border: #0000FF 4px solid
 }
 
