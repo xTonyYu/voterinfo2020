@@ -6,6 +6,8 @@
 * {
   margin: 0;
   color: #1B1B1B;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 body {
@@ -173,7 +175,8 @@ button {
 
 .card {
   width: 90vw;
-  border: 1px solid black;
+  border: 1px solid grey;
+  border-radius: 15px;
   background-color: white;
   align-items: center;
   display: flex;
@@ -184,17 +187,34 @@ button {
   margin: 20px 10px 20px 10px;
 }
 
+#current-address
+
 .address {
-  margin: 20px 0;
+  margin: 20px ;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.card p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 20px 0;
+}
 .card a {
-  margin-left: 20px;
+  margin: 0 10px 0 20px;
   text-decoration: none;
   color: #0058FF;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .checklist {
@@ -220,6 +240,7 @@ ul {
 
 ul li {
   margin: 20px 0 20px 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 li::before {
