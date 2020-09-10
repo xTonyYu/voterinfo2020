@@ -294,6 +294,7 @@ ul li {
   .landing-item,
   .landing-item p {
     width: 15vw;
+    height: 23vw;
   }
 
   #form-container {
@@ -302,7 +303,6 @@ ul li {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
   }
 
   #form-container h3 {
@@ -314,11 +314,19 @@ ul li {
   }
 
   .small-form-fields {
-    width: fit-content;
+    width: max-content;
   }
   .small-form-fields input, .small-form-fields label {
-    width: 30vw !important;
-    margin: 0 50px 0 50px;
+    width: 31.5vw !important;
+    margin: 0 0 5px 0;
+  }
+  .small-form-fields:nth-child(2),
+  .small-form-fields:nth-child(4) {
+    margin: 0 2vw 5px 0;
+  }
+  .small-form-fields:nth-child(3),
+  .small-form-fields:nth-child(5) {
+    margin: 0 0 5px 2vw;
   }
 
   .search {
@@ -326,9 +334,14 @@ ul li {
     margin-bottom: 150px;
   }
 
+  #req-field {
+    position: relative;
+  }
+
   #req-field p {
     position: absolute;
     right: 15vw;
+    top: -20px;
   }
 
   #info-page-container {
