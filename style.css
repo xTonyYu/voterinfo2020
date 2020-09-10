@@ -6,6 +6,8 @@
 * {
   margin: 0;
   color: #1B1B1B;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 body {
@@ -184,8 +186,10 @@ button {
   margin: 20px 10px 20px 10px;
 }
 
+#current-address
+
 .address {
-  margin: 20px 0;
+  margin: 20px ;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
